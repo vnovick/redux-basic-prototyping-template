@@ -1,11 +1,8 @@
 /**
  * Created by vlad on 7/30/15.
  */
+import React from 'react';
+import ReactDom from "react-dom";
+import App from "components/App";
 
-var React = require("react");
-var App = require("components/App");
-
-React.render(
-    React.createElement(App, {name: "FZ2Hero"}),
-    document.body
-);
+ReactDom.render(<App/>, document.getElementById("Editor"));

@@ -4,7 +4,7 @@ import { Dispatcher } from 'flux';
 class AppDispatcher extends Dispatcher {
     handleViewAction(action){
         this.dispatch({
-            source:'VIEW_ACTION',
+            source: 'VIEW_ACTION',
             action: action
         });
     }
@@ -12,4 +12,4 @@ class AppDispatcher extends Dispatcher {
 }
 
 
-export default new AppDispatcher;
+export default new AppDispatcher();

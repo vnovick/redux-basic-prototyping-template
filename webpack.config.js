@@ -18,8 +18,7 @@ module.exports = {
     devServer: {
         contentBase: ".",
         inline: true,
-        watch: true,
-        hot: true
+        watch: true
     },
     module: {
         loaders: [
@@ -37,7 +36,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                loaders: ["react-hot","babel-loader?optional[]=runtime"],
+                loader: "babel",
                 exclude: [
                     /node_modules/,
                     /libs/,

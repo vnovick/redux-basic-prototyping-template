@@ -1,6 +1,3 @@
 export default {
-    NEW_GAME: 'NEW_GAME',
-    SHOW_SCORES: 'SHOW_SCORES',
-    START: 'START',
-    UPDATE_SCORE: 'UPDATE_SCORE'
+    
 };
