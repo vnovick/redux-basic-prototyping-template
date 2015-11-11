@@ -7,7 +7,10 @@ module.exports = {
         extensions: ["", ".js", ".min.js", ".scss"]
     },
     entry: {
-        app: ['entry.js']
+        app: [
+            'webpack-dev-server/client?http://localhost:8080',
+            './entry.js'
+        ]
     },
     devtool: "source-map",
     output: {
@@ -18,7 +21,7 @@ module.exports = {
     devServer: {
         contentBase: ".",
         inline: true,
-        watch: true
+        watch: true,
     },
     module: {
         loaders: [

@@ -1,16 +1,19 @@
-require("styles/app.scss")
 import React from 'react';
+export default class App extends React.Component {
 
-class App extends React.Component {
-    constructor(props){
-        super(props);
+    getChildren(){
+        return React.Children.map(this.props.children, element =>{
+            return React.cloneElement(this.props.children, this.props);
+        });
     }
 
     render() {
         return (
-            <div>App Ready</div>
+           <div className="Application">
+             { this.getChildren() }
+           </div>
         );
     }
 }
 
-export default App;
+App.PropTypes = {}
