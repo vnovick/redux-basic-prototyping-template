@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     resolve: {
-        modulesDirectories: ["node_modules", "."],
+        modulesDirectories: ["node_modules", "bower_components", "."],
         extensions: ["", ".js", ".min.js", ".scss"]
     },
     entry: {
@@ -40,6 +40,15 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: "babel",
+                exclude: [
+                    /node_modules/,
+                    /libs/,
+                    /vendor/
+                ]
+            },
+            {
+                test: /\.css$/,
+                loader: "style!css?sourceMap",
                 exclude: [
                     /node_modules/,
                     /libs/,

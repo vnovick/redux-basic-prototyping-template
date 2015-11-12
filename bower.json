@@ -1,0 +1,19 @@
+{
+  "name": "SirTrevor",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vnovick/react-redux-editor",
+  "authors": [
+    "Vladimir Novick <vlad@90min.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sir-trevor-js": "~0.5.0"
+  }
+}

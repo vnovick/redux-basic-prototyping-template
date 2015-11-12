@@ -1,7 +1,7 @@
-import ActionTypes from 'constants/ActionTypes';
+import { appActionTypes } from 'constants/actionTypes';
 
 export const setState = (store) => {
     store.dispatch({
-        type: ActionTypes.SET_STATE
+        type: appActionTypes.SET_STATE
     });
 };
