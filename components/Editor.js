@@ -1,17 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import editorActions from 'actions/editorActions';
 
 export const Editor = class Editor extends React.Component {
     render() {
         return (
-          <div>Welcome to Editor {this.props.actions}</div>
+          <div className="editor" contentEditable onChange={editorActions.contentUpdate}>
+
+          </div>
         )
     }
 };
 
 function mapStateToProps(state){
     return {
-        actions: state.get('editor').actions
+        actions: state.app.getIn(['editor', 'actions'])
     };
 }
 

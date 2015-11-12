@@ -1,19 +1,16 @@
 import React from 'react';
+import { EditorContainer } from 'components/Editor';
+import { Provider} from 'react-redux';
 export default class App extends React.Component {
-
-    getChildren(){
-        return React.Children.map(this.props.children, element =>{
-            return React.cloneElement(this.props.children, this.props);
-        });
-    }
-
     render() {
+        let props, { store } = this.props;
         return (
-           <div className="Application">
-             { this.getChildren() }
-           </div>
+          <div>
+            <Provider store={ store } className="Application">
+              <EditorContainer {...props} />
+            </Provider>
+          </div>
+
         );
     }
 }
-
-App.PropTypes = {}
