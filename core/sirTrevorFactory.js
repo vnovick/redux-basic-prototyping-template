@@ -6,6 +6,7 @@ import trevorEvents from 'constants/sirTrevorEvents';
 export default {
     getInstance: (store, element)=>{
         let SirTrevor = new sirTrevor.Editor({ el: jquery(element) });
+        window.SirTrevor = SirTrevor;
         trevorEvents(store).map((action, key)=>{
             sirTrevor.EventBus.on(key, action);
         });
