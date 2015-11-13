@@ -1,7 +1,7 @@
 import jquery from 'jquery';
 import sirTrevor from 'sir-trevor-js/sir-trevor';
 import sirTrevorCss from 'sir-trevor-js/sir-trevor.css';
-import trevorEvents from 'constants/sirTrevorEvents';
+import trevorEvents from './sirTrevorEventsProxy';
 
 export default {
     getInstance: (store, element)=>{
