@@ -43,7 +43,8 @@ module.exports = {
                 exclude: [
                     /node_modules/,
                     /libs/,
-                    /vendor/
+                    /vendor/,
+                    /bower_components/,
                 ]
             },
             {
