@@ -10,5 +10,6 @@ export default {
         trevorEvents(store).map((action, key)=>{
             sirTrevor.EventBus.on(key, action);
         });
+        return SirTrevor;
     }
 };

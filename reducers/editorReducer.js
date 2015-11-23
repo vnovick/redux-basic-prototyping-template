@@ -1,25 +1,25 @@
-import { Map } from 'immutable';
+import { Map, List } from 'immutable';
 import { editorActionTypes } from 'constants/actionTypes';
 
 const INITIAL_STATE = Map({
-    content: Map()
+    content: Map({blocks: Map()})
 });
 
 
-function setState(state, newState) {
-    return state.merge(newState);
+function setState(currentState, newState, blockId) {
+    return currentState.updateIn(['content', 'blocks', blockId ], blocks => newState);
 }
 
-function addBlockToState(state, newState) {
-    return state.merge(newState);
+function addBlockToState(currentState, newState, blockId) {
+    return currentState.updateIn(['content', 'blocks'], blocks => blocks.set(blockId, newState));
 }
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
     case editorActionTypes.CONTENT_CHANGE:
-        return setState(state, action.state);
+        return setState(state, action.state, action.blockId);
     case editorActionTypes.NEW_BLOCK:
-        return addBlockToState(state, action.state);
+        return addBlockToState(state, action.state, action.blockId);
     }
     return state;
 }
