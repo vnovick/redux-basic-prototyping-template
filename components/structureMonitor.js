@@ -4,7 +4,10 @@ import {connect} from 'react-redux';
 export const StructureMonitor = class Editor extends React.Component {
     render() {
         return (
-          <textarea style={{width: "100%", height:"100vh", fontSize: "1rem" }} className={this.props.className} value= {JSON.stringify(this.props.content, null, 2) } />
+          <aside className={this.props.className}>
+            <h1 className="title">Structure Monitor</h1>
+            <textarea className="monitor" readOnly value= {JSON.stringify(this.props.content, null, 2) } />
+          </aside>
         )
     }
 };

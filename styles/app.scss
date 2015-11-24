@@ -1,1 +1,15 @@
 @import 'reset';
+@import 'colors';
+@import 'components';
+@import 'editor';
+@import 'monitor';
+
+body {
+  background: #eeeded;
+}
+
+.app {
+  &__container {
+    display: flex;
+  }
+}
