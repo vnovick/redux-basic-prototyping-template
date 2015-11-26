@@ -1,8 +1,6 @@
 @import 'reset';
 @import 'colors';
 @import 'components';
-@import 'editor';
-@import 'monitor';
 
 body {
   background: #eeeded;
@@ -11,5 +9,6 @@ body {
 .app {
   &__container {
     display: flex;
+    justify-content: center;
   }
 }

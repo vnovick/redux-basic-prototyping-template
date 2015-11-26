@@ -1,7 +1,6 @@
 import React from 'react';
-import { EditorContainer } from 'components/editor';
-import { StructureMonitorContainer } from 'components/structureMonitor';
 import { Provider} from 'react-redux';
+import { IntroContainer } from 'components/intro';
 require('styles/app')
 export default class App extends React.Component {
     render() {
@@ -10,8 +9,7 @@ export default class App extends React.Component {
           <div className="app">
             <Provider store={ store }>
               <div className="app__container">
-                <EditorContainer className="card card--z1" store={store} {...props} />
-                <StructureMonitorContainer className="card card--z3" {...props} />
+                <IntroContainer className="card card--z1 card--intro"/>
               </div>
             </Provider>
           </div>

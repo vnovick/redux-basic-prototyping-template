@@ -1,12 +1,10 @@
 .card {
   background: #fff;
+  justify-content: center;
   border-radius: 2px;
   display: block;
-  float: left;
   height: 100%;
   margin: 1rem;
-  position: relative;
-  width: 100%;
   padding: 2rem;
 
   &--interactive {

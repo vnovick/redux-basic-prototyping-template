@@ -2,8 +2,9 @@ import {Map, List} from 'immutable';
 import { appActionTypes } from 'constants/actionTypes';
 
 const INITIAL_STATE = Map({
-    editor: Map({
-        actions: List.of('write', 'read')
+    introduction: Map({
+        title: 'Hello React Redux Starter',
+        paragraph: 'This is the basic React starter'
     })
 });
 
