@@ -15,8 +15,8 @@ export const Intro = class Intro extends React.Component {
 
 function mapStateToProps(state){
     return {
-        title: state.app.getIn(['introduction', 'title']),
-        paragraph: state.app.getIn(['introduction', 'paragraph'])
+        title: state.intro.getIn(['content', 'title']),
+        paragraph: state.intro.getIn(['content', 'paragraph'])
     };
 }
 

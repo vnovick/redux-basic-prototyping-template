@@ -1,7 +1,12 @@
 import {Map, List} from 'immutable';
 import { appActionTypes } from 'constants/actionTypes';
 
-const INITIAL_STATE = Map({});
+const INITIAL_STATE = Map({
+    content: Map({
+        title: 'Hello React Redux Starter',
+        paragraph: 'This is the basic React starter'
+    })
+});
 
 function setState(state, newState) {
     return state.merge(newState);
