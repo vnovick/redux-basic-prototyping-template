@@ -23,7 +23,7 @@ function attachCustomListenes(store, trevorEvent){
         if (e.keyCode === 13) {
             newTextBlock();
         }
-        contentUpdate(store, e.target.innerHTML.replace(/(<\/p>|<p>|<br>)/g, ''), trevorEvent.blockID)
+        contentUpdate(store, window.ST.toMarkdown(e.target.innerHTML.replace(/(<\/p>|<p>|<br>)/g, '')), trevorEvent.blockID)
     });
     trevorEvent.text_block.keyup(function (e){
         if(+e.target.dataset.prevCarretPosition === 0 && e.keyCode === 8){
