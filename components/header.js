@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import header from 'html!pages/partials/header.html';
-import 'styles/header';
+import 'styles/partials/header';
 
 export const Header = class Footer extends React.Component {
     render() {

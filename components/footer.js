@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import footer from 'html!pages/partials/footer.html';
-import 'styles/footer';
+import 'styles/partials/footer';
 
 export const Footer = class Footer extends React.Component {
     render() {

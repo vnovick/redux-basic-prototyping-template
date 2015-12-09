@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import navbar from 'html!pages/partials/navbar.html';
-import 'styles/navbar';
+import 'styles/partials/navbar';
 
 export const Navbar = class Footer extends React.Component {
     render() {
