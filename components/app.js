@@ -1,15 +1,23 @@
 import React from 'react';
+import { HeaderContainer } from 'header';
+import { PageContainer } from 'page';
+import { NavbarContainer } from 'navbar';
+import { FooterContainer } from 'footer';
 import { Provider} from 'react-redux';
-import { IntroContainer } from 'components/intro';
+
 require('styles/app')
 export default class App extends React.Component {
+
     render() {
-        let props, { store } = this.props;
+        let { store } = this.props;
         return (
           <div className="app">
             <Provider store={ store }>
               <div className="app__container">
-                <IntroContainer className="card card--z1 card--intro"/>
+                <HeaderContainer className="header"/>
+                <NavbarContainer className="navbar"/>
+                <PageContainer className="page" />
+                <FooterContainer className="footer"/>
               </div>
             </Provider>
           </div>

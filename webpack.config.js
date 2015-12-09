@@ -8,7 +8,7 @@ module.exports = {
     },
     entry: {
         app: [
-            'webpack-dev-server/client?http://localhost:8080',
+            'webpack-dev-server/client?http://localhost:4545',
             './entry.js'
         ]
     },
@@ -21,6 +21,7 @@ module.exports = {
     devServer: {
         contentBase: ".",
         inline: true,
+        port: 4545,
         watch: true,
     },
     module: {
@@ -55,7 +56,11 @@ module.exports = {
                     /libs/,
                     /vendor/
                 ]
-            }
+            },
+            {
+                test: "\.html$",
+                loader: "html"
+            },
         ]
     },
     plugins: [

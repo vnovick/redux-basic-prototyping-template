@@ -1,10 +1,8 @@
-import {Map, List} from 'immutable';
 import { appActionTypes } from 'constants/actionTypes';
-
-const INITIAL_STATE = Map({});
+const INITIAL_STATE = {};
 
 function setState(state, newState) {
-    return state.merge(newState);
+    return { ...state, ...newState }
 }
 
 export default (state = INITIAL_STATE, action) => {

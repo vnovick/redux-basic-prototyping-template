@@ -9,7 +9,7 @@ applyMiddleware(thunk, createLogger({
     collapsed: true,
     duration: true,
     timestamp: true,
-    transformer: (state = Map())=>{
+    stateTransformer: (state = Map())=>{
         return Object.assign(Map(state).toJS(), { [Symbol("Immutable State")]: state });
     }
 }))
