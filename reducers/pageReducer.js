@@ -3,7 +3,8 @@ import { pageActionTypes } from 'constants/actionTypes';
 import home from 'html!pages/home.html';
 
 const INITIAL_STATE = {
-    availablePages: { home }
+    availablePages: { home },
+    currentPage: home
 };
 
 function setCurrentState(state, page) {

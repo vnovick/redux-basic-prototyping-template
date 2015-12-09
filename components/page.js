@@ -8,8 +8,15 @@ import 'styles/pages/home.scss';
 export const Page = class Footer extends React.Component {
     componentDidMount(){
         const { dispatch } = this.props;
-        window.location.hash = 'home';
-        window.onhashchange = dispatch(changeHash(window.location.hash.slice(1)));
+        if (!location.hash) {
+            location.hash = "home";
+        }
+        else {
+            dispatch(changeHash(location.hash.slice(1)));
+        }
+        window.onhashchange = ()=>{
+            dispatch(changeHash(location.hash.slice(1)));
+        }
     }
 
     render() {
